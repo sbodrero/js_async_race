@@ -119,7 +119,6 @@ async function delay(ms) {
 	try {
 		return await new Promise(resolve => setTimeout(resolve, ms));
 	} catch(error) {
-		console.log("an error shouldn't be possible here");
 		console.log(error);
 	}
 }
@@ -254,7 +253,7 @@ async function runCountdown() {
 			}
 		})
 	} catch(error) {
-		console.log(`There was an error rungin the countdown ${error}`);
+		console.log(`There was an error running the countdown ${error}`);
 	}
 }
 
@@ -263,8 +262,6 @@ async function runCountdown() {
  * @param target
  */
 function handleSelectPodRacer(target) {
-	console.log("selected a pod", target.id);
-
 	// remove class selected from all racer options
 	const selected = document.querySelector('#racers .selected');
 	if(selected) {
@@ -282,8 +279,6 @@ function handleSelectPodRacer(target) {
  * @param target
  */
 function handleSelectTrack(target) {
-	console.log("selected a track", target.id);
-
 	// remove class selected from all track options
 	const selected = document.querySelector('#tracks .selected');
 
@@ -302,8 +297,11 @@ function handleSelectTrack(target) {
  * @returns {Promise<Response | string>}
  */
 function handleAccelerate() {
-	console.log("accelerate button clicked");
-	return accelerate(getRaceId(store));
+	try {
+		return accelerate(getRaceId(store));
+	} catch (err) {
+		console.log(err);
+	}
 }
 
 // HTML VIEWS ------------------------------------------------
