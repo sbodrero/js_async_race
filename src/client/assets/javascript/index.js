@@ -207,7 +207,7 @@ function runRace(raceID) {
 				try {
 					const race = await getRace(raceID);
 					const { positions } = race;
-					if(race?.status.toString() === 'in-progress') {
+					if(race.status.toString() === 'in-progress') {
 						return updateRaceProgress(positions);
 					}
 					clearInterval(raceInterval);
