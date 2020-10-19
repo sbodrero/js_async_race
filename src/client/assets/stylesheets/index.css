@@ -20,8 +20,13 @@ body {
   min-height: 100vh;
 }
 
+#error {
+  color: red;
+  margin-bottom: 10px;
+}
+
 header {
-  background-image: url('https://via.placeholder.com/1150');
+  background-image: url('../images/home.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

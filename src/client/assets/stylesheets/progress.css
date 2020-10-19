@@ -2,7 +2,11 @@
 
 /* -------------------  MOBILE  --------------------- */
 header {
-  background-image: url('https://via.placeholder.com/1150');
+  background-image: url('../images/end.png');
+}
+
+main {
+    text-align: center;
 }
 
 main#two-columns {
@@ -27,6 +31,15 @@ section#accelerate button {
 #big-numbers {
     font-weight: bolder;
     font-size: 70px;
+}
+
+#create-race {
+    text-align: center;
+}
+
+#create-race ul,
+#create-race button {
+    margin: 0 auto;
 }
 
 /* -------------------  TABLET  --------------------- */
